@@ -14,4 +14,11 @@ authenticator = IAMAuthenticator('apikey')
 language_translator = LanguageTranslatorV3(version='2018-05-01',authenticator=authenticator)
 
 #language_translator.set_disable_ssl_verification(True)
-#language_translator.set_service_url('url')
+language_translator.set_service_url('url')
+
+def english_to_french(englishText):
+    translation = language_translator.translate(text=englishText,model_id='en-fr').get_result()
+    frenchText=translation['translations'][0]['translation']
+    return frenchText
+
+print(english_to_french("hello"))
