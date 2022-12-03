@@ -15,22 +15,6 @@ authenticator = IAMAuthenticator(apikey)
 language_translator = LanguageTranslatorV3(version='2018-05-01',authenticator=authenticator)
 language_translator.set_service_url(url)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #English To French translator function
 def english_to_french(english_text):
     """ Return french text of the english text passed as argument """
