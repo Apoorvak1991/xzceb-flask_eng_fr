@@ -3,7 +3,7 @@ import unittest
 from translator import english_to_french,french_to_english
 
 class TestEnglishToFrench(unittest.TestCase):
-    """Test to verify englist to french translated text"""
+    """Test to verify english to french translated text"""
     def test1(self):
         """Function to validte actual and expected output """
         self.assertNotEqual(english_to_french('Bonjour'), 'Hello')
