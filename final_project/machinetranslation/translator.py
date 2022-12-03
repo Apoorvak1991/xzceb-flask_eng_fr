@@ -7,10 +7,29 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 #apikey = os.environ['apikey']
 #url = os.environ['url']
 
+apikey='agdmm9bCE4yz047efGDuWB-LtxKkngRl3VhTdmXCDPp9'
+url='https://api.au-syd.language-translator.watson.cloud.ibm.com/instances/f80d248b-8b4d-4632-a985-c65dec9b8c6d'
+
 # Language translator instance
-authenticator = IAMAuthenticator('agdmm9bCE4yz047efGDuWB-LtxKkngRl3VhTdmXCDPp9')
+authenticator = IAMAuthenticator(apikey)
 language_translator = LanguageTranslatorV3(version='2018-05-01',authenticator=authenticator)
-language_translator.set_service_url('https://api.au-syd.language-translator.watson.cloud.ibm.com/instances/f80d248b-8b4d-4632-a985-c65dec9b8c6d')
+language_translator.set_service_url(url)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #English To French translator function
 def english_to_french(english_text):
